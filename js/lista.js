@@ -1,42 +1,26 @@
 class Libro
 {
-    constructor(nombre, precio, total)
+    constructor(nombre, precio)
     {
+        this.costos = [1,2,3,4];
         this.nombre = nombre;
         this.precio = precio;
-        this.total = total;
     }
-    sumaPrecios()
+    sumaCostos()
     {
-        for (var i=0; i<5; i++) {
-            console.log('intento ' + i);
+        var sum = 0;
+        for (let i = 0; i < this.costos.length; i++) {
+            sum += this.costos[i];
+            console.log(sum);
         }
-        let suma = libro1.precio + libro2.precio + libro3.precio + libro4.precio;
-        this.total = suma;
-        console.log(this.total);
-        return this.total;
+
     }
+    
 }
-const libro1 = new Libro('libromagico', 50);
-console.log( libro1.nombre);
-console.log( libro1.precio);
+let libro1 = new Libro();
+libro1.sumaCostos();
 
-const libro2 = new Libro('librosuspenso', 70);
-console.log( libro2.nombre);
-console.log( libro2.precio);
-
-const libro3 = new Libro('librohistoria', 60);
-console.log( libro3.nombre);
-console.log( libro3.precio);
-
-const libro4 = new Libro('librociencia', 20);
-console.log( libro4.nombre);
-console.log( libro4.precio);
-
-libro4.sumaPrecios();
-console.log(this.total);
-
-class Listado 
+class Listahtml
 {
     constructor()
     {
